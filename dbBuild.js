@@ -60,6 +60,7 @@ function userSaver(user,geocode){
   return new Promise(function(fulfill,reject){
     var newUser = new User(user)
     newUser.location = {
+                          type: 'Point',
                           coordinates: [geocode.location.lng,geocode.location.lat]
                         }
     newUser.save(function(err,user){

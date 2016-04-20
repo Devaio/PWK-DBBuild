@@ -1,0 +1,104 @@
+[{
+    "username" : "architDaBoss2",
+    "password" : "test",
+    "name": "Archit Mahto",
+    "phone": "281-928-1111",
+    "email": "archit@ferguson2.aol",
+    "address": {
+                    "street": "5717 Arapahoe Ave.",
+                    "city"  : "Boulder",
+                    "state" : "CO",
+                    "zip"   : "80303"
+                }
+},
+{
+    "username" : "hdub2",
+    "password" : "test",
+    "name": "Hunter Williams",
+    "phone": "281-928-7465",
+    "email": "hunter.h.williams2@gmail.com",
+    "address": {
+                    "street": "545 Utica",
+                    "city"  : "Boulder",
+                    "state" : "CO",
+                    "zip"   : "80304"
+                }
+},
+{
+    "username" : "mdee",
+    "password" : "test",
+    "name": "Michael Dee",
+    "phone": "504-128-7465",
+    "email": "mdee@gmail.com",
+    "address": {
+                    "street": "860 Emerson St",
+                    "city"  : "Denver",
+                    "state" : "CO",
+                    "zip"   : "80218"
+                }
+},
+{
+    "username" : "cpine",
+    "password" : "test",
+    "name": "Chris Pine",
+    "phone": "504-128-7465",
+    "email": "CP@gmail.com",
+    "address": {
+                    "street": "864 Emerson St",
+                    "city"  : "Denver",
+                    "state" : "CO",
+                    "zip"   : "80218"
+                }
+},
+{
+    "username" : "arduo",
+    "password" : "test",
+    "name": "Arnold Duo",
+    "phone": "504-128-7278",
+    "email": "AD@gmail.com",
+    "address": {
+                    "street": "868 Emerson St",
+                    "city"  : "Denver",
+                    "state" : "CO",
+                    "zip"   : "80218"
+                }
+},
+{
+    "username" : "rutabaga",
+    "password" : "test",
+    "name": "Rutherford Baga",
+    "phone": "504-128-1956",
+    "email": "RB@gmail.com",
+    "address": {
+                    "street": "892 Emerson St",
+                    "city"  : "Denver",
+                    "state" : "CO",
+                    "zip"   : "80218"
+                }
+},
+{
+    "username" : "cristiano",
+    "password" : "test",
+    "name": "Christian Macy",
+    "phone": "504-128-7463",
+    "email": "CM@gmail.com",
+    "address": {
+                    "street": "3909 Fulton",
+                    "city"  : "Boulder",
+                    "state" : "CO",
+                    "zip"   : "80303"
+                }
+},
+{
+    "username" : "stacy",
+    "password" : "test",
+    "name": "Stacy Macy",
+    "phone": "504-375-7463",
+    "email": "SM@gmail.com",
+    "address": {
+                    "street": "3911 Fulton",
+                    "city"  : "Boulder",
+                    "state" : "CO",
+                    "zip"   : "80303"
+                }
+}]

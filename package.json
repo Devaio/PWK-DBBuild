@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hdub2/PWK-DBBuild#readme",
   "dependencies": {
-    "mongoose": "^4.4.12"
+    "mongoose": "^4.4.12",
+    "request": "^2.72.0"
   }
 }

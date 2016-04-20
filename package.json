@@ -1,0 +1,22 @@
+{
+  "name": "pwk-db-build",
+  "version": "1.0.0",
+  "description": "db build utility for testing project-white-kodiak",
+  "main": "dbBuild.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdub2/PWK-DBBuild.git"
+  },
+  "author": "hdub2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdub2/PWK-DBBuild/issues"
+  },
+  "homepage": "https://github.com/hdub2/PWK-DBBuild#readme",
+  "dependencies": {
+    "mongoose": "^4.4.12"
+  }
+}

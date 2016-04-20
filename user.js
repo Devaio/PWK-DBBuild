@@ -19,4 +19,6 @@ userSchema = new Schema({
   userGear : [{ type: Schema.Types.ObjectId, ref: 'Gear' }]
 })
 
+userSchema.index({'location.coordinates':'2dsphere'})
+
 module.exports = mongoose.model('user',userSchema)

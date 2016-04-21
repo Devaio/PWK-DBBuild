@@ -8,7 +8,6 @@ var mongoose = require('mongoose'),
 
 var users = JSON.parse(fs.readFileSync(__dirname + '/users.json','utf-8'))
 
-// DB Initialization
 mongoose.connect(dbURL, function(err){
   if(err)  console.log("!- Failed to connect to gears db.")
   if(!err) console.log("-- Connected to gears db.")
@@ -27,11 +26,20 @@ mongoose.connect(dbURL, function(err){
   mongoose.connection.close()
 })
 
+// -----------------------------------------------------------------------------
+// primary responsibility for dispatching and resolving the chain of functions
+// to create each object.  maps a chain of Promise-wrapped asynchronous calls
+// onto each element of the users array - parsed from file input.
+// returns: array of user objects and/or null values in the case of attempted
+// creation of a duplicate user
+// -----------------------------------------------------------------------------
 function writeUsers(users){
   return Promise.all(
     users.map(function(user){
       return new Promise(function(fulfill,reject){
-        geocode(user.address.street + ', ' + user.address.city + ', ' + user.address.state + " " + user.address.zip)
+        var address = user.address.street + ', ' + user.address.city + ', ' +
+                      user.address.state + " " + user.address.zip
+        geocode(address)
         .then(userSaver.bind(null,user))
         .then(function(user){
           fulfill(user)
@@ -44,6 +52,10 @@ function writeUsers(users){
   )
 }
 
+// *****************************************************************************
+// geocode - helper function, invoked in writeUsers - returns a Promise
+// requests geoJSON conversion for a passed address, fulfills coordinate pair
+// *****************************************************************************
 function geocode(address){
   return new Promise(function(fulfill,reject){
     request('https://maps.googleapis.com/maps/api/geocode/json?' +
@@ -56,6 +68,10 @@ function geocode(address){
   })
 }
 
+// *****************************************************************************
+// userSaver - helper function, invoked in writeUsers - returns a Promise
+// saves user to the db, fulfills saved user
+// *****************************************************************************
 function userSaver(user,geocode){
   return new Promise(function(fulfill,reject){
     var newUser = new User(user)
